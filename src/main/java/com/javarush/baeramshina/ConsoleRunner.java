@@ -3,17 +3,39 @@ package com.javarush.baeramshina;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class ConsoleRunner {
     public static void main(String[] args) {
+readFile();
 
-        Symbols.printAlphabet();
+//        readFile();
+    }
+    public static class LogicEncrypted{
+        public static Map<Character, Character> createCaesarCipher(int shift){
+            Map<Character,Character> map = new HashMap<>();
+            int length=Symbols.ALPHABET.length;
+
+            for (int i = 0; i <length ; i++) {
+                char original=Symbols.ALPHABET[i];
+                char encrypt=Symbols.ALPHABET[(i+shift)%33];
+                System.out.println( original+" ------ "+encrypt);
+
+            }
+
+            return map;
+        }
 
     }
 
 
-    public class Symbols {
+
+
+
+
+    public static class Symbols {
         private static final char[] ALPHABET = new char[]{'а', 'б', 'в', 'г', 'д', 'е', 'ж', 'з',
                 'и', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ',
                 'ъ', 'ы', 'ь', 'э', 'я', '.', ',', '«', '»', '"', '\'', ':', '!', '?', ' '};
@@ -25,6 +47,9 @@ public class ConsoleRunner {
             System.out.println();
         }
     }
+
+
+
 
 
     private static void readFile() {
