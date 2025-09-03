@@ -1,0 +1,15 @@
+package com.javarush.baeramshina;
+
+public class Symbols {
+    protected static final char[] symbols = new char[]{'а', 'б', 'в', 'г', 'д', 'е', 'ж', 'з',
+            'и', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ',
+            'ъ', 'ы', 'ь', 'э', 'я', '.', ',', '«', '»', '"', '\'', ':', '!', '?', ' ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+
+    public static void printSymbols() {
+        for (char c : symbols) {
+            System.out.print(c + " ");
+        }
+        System.out.println();
+    }
+}
+
