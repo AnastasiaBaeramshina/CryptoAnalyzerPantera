@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class ReadFile {
     public static String readFile() {
-    String input = "text/encrypted.txt";
+    String input = "text/dict.txt";
     StringBuilder info = new StringBuilder();
     try (BufferedReader reader = new BufferedReader(new FileReader(input))) {
 
