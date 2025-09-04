@@ -17,14 +17,4 @@ public class Encrypt {
 }
 
 
-//        char lowerChar = Character.toLowerCase(c);
-//        char encryptedChar = cipherMap.getOrDefault(lowerChar, c);
-//        if (Character.isUpperCase(c)) {
-//            encryptedChar = Character.toUpperCase(encryptedChar);
-//        }
-//        result.append(encryptedChar);
-//    }
-//        return result.toString();
 
-//}
-//        }
