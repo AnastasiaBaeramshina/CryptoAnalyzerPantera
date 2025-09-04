@@ -18,11 +18,6 @@ public class ConsoleRunner {
         ConsoleReader consoleReader = new ConsoleReader(console);
         String readInput = consoleReader.readInput();
 
-//        String input = console.nextLine();
-//        String originalFile = readFile();
-//        System.out.println("Original" + originalFile);
-
-
 
         Map<Character, Character> caesarCipher = LogicEncrypted.createCaesarCipher(3);
         String encrypted = encryptText(originalFile, caesarCipher);
