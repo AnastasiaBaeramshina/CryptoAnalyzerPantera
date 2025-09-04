@@ -1,26 +1,35 @@
 package com.javarush.baeramshina;
 
 import java.io.BufferedReader;
+
 import java.io.FileReader;
 import java.io.IOException;
 
-public class ReadFile {
-    public static String readFile() {
-    String input = "text/dict.txt";
-    StringBuilder info = new StringBuilder();
-    try (BufferedReader reader = new BufferedReader(new FileReader(input))) {
+public class ReadFile extends InputReader {
+    private final String filePath;
 
-        String line;
-        while ((line = reader.readLine()) != null) {
-            info.append(line).append("\n");
-
-            System.out.println(line);
-        }
-    } catch (IOException e) {
-        System.out.println("Ошибка при чтении файла!!!");
-
-        e.printStackTrace();
+    public ReadFile(String filePath) {
+        this.filePath = filePath;
     }
-    return info.toString().trim();
-}
+
+    @Override
+    public String readInput() {
+//    String input = "text/dict.txt";
+        StringBuilder info = new StringBuilder();
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+        while((line =reader.readLine())!=null)
+
+            {
+                info.append(line).append("\n");
+
+                System.out.println(line);
+            }
+        } catch(IOException e) {
+            System.out.println("Ошибка при чтении файла!!!");
+
+            e.printStackTrace();
+        }
+        return info.toString().trim();
+    }
 }
