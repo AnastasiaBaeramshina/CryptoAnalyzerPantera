@@ -14,7 +14,7 @@ public class ReadFile extends InputReader {
 
     @Override
     public String readInput() {
-//    String input = "text/dict.txt";
+
         StringBuilder info = new StringBuilder();
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
